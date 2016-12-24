@@ -1,0 +1,11 @@
+[Unit]
+Description = Audios Arbol Ramon
+After = syslog.target network.target
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/python /home/pi/audios/audios.py
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
