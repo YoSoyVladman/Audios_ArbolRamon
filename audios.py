@@ -18,7 +18,7 @@ TUCAN = 'X0801'   #TUCAN
 CARPINTERO = 'X0802'   #CARPINTERO
 OROPENDULA = 'X0803'   #OROPENDULA
 SARAHUATO = 'X0804'   #SARAHUATO
-TARANTULA = 'X0805'   #TARANTULA
+RANA = 'X0805'   #TARANTULA
 MURCIELAGO = 'X0806'   #MURCIELAGO
 
 ######################################
@@ -35,7 +35,8 @@ def mandar_luces(m):
 
 while True:
     if (GPIO.input(PIN) != False):
-        os.system('aplay /home/pi/audios/murcielago.wav')
-        mandar_luces(TUCAN)
+	print('RANA')
+        os.system('aplay /home/pi/audios/rana.wav')
+        mandar_luces(RANA)
     sleep(0.1)
 cliente.close()
